@@ -1251,40 +1251,43 @@ img {
   }
 
   .nav-links {
-    display: none;
-    position: fixed;
+    position: absolute;
     top: 72px;
     left: 0;
     right: 0;
-    bottom: 0;
     background: #ffffff;
     flex-direction: column;
-    padding: 20px 24px;
+    padding: 0;
     gap: 0;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     z-index: 9999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
   .nav-links.active {
-    display: flex !important;
-  }
-
-  .nav-links li:last-child {
-    padding-bottom: 20px;
+    max-height: 400px;
   }
 
   .nav-links li {
-    border-bottom: 1px solid var(--gray-100);
+    list-style: none;
   }
 
   .nav-links a {
     display: block;
-    padding: 14px 0;
+    padding: 16px 24px;
     font-size: 1rem;
     font-weight: 600;
     color: var(--dark-blue);
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:active {
+    background: var(--blue-light);
+    color: var(--green);
   }
 
   .nav-links a::after {

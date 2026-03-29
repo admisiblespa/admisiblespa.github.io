@@ -14,22 +14,11 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Cerrar menú al hacer click en un link
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     menuToggle.classList.remove('active');
     navLinks.classList.remove('active');
-    document.body.style.overflow = '';
   });
-});
-
-// Bloquear scroll del body cuando el menú está abierto
-menuToggle.addEventListener('click', () => {
-  if (navLinks.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
 });
 
 // ===== SCROLL ANIMATIONS =====
