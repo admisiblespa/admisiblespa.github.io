@@ -1261,15 +1261,20 @@ img {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 32px 24px;
-    gap: 8px;
+    padding: 20px 24px;
+    gap: 0;
     box-shadow: var(--shadow-lg);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 1000;
   }
 
   .nav-links.active {
     display: flex;
+  }
+
+  .nav-links li:last-child {
+    padding-bottom: 20px;
   }
 
   .nav-links li {
@@ -1278,8 +1283,8 @@ img {
 
   .nav-links a {
     display: block;
-    padding: 16px 0;
-    font-size: 1.063rem;
+    padding: 14px 0;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--dark-blue);
   }
