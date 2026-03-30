@@ -1,29 +1,25 @@
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 
-if (navbar) {
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  });
-}
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
 
 // ===== MOBILE MENU =====
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-    });
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    navLinks.classList.remove('active');
   });
-}
+});
 
 // ===== SCROLL ANIMATIONS =====
 const observerOptions = {
@@ -105,11 +101,9 @@ window.addEventListener('scroll', () => {
 
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  const href = anchor.getAttribute('href');
-  if (href === '#') return;
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(href);
+    const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       const offset = 80;
       const position = target.offsetTop - offset;
@@ -131,7 +125,6 @@ emailjs.init(EMAILJS_PUBLIC_KEY);
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-if (contactForm && formSuccess) {
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -174,4 +167,3 @@ contactForm.addEventListener('submit', function (e) {
       }, 3000);
     });
 });
-}
