@@ -116,7 +116,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // IMPORTANTE: Reemplaza estos valores con los de tu cuenta EmailJS
 // Guía de configuración en: docs/emailjs-setup.md
 const EMAILJS_PUBLIC_KEY = 'yQPmuh0FgzM0Yd3ij';
-const EMAILJS_SERVICE_ID = 'service_obyas91';
+const EMAILJS_SERVICE_ID = 'service_7e4zai8';
 const EMAILJS_TEMPLATE_ID = 'template_xpma2v4';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
