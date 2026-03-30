@@ -131,8 +131,7 @@ emailjs.init(EMAILJS_PUBLIC_KEY);
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-if (!contactForm || !formSuccess) return;
-
+if (contactForm && formSuccess) {
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -175,3 +174,4 @@ contactForm.addEventListener('submit', function (e) {
       }, 3000);
     });
 });
+}
